@@ -3,5 +3,5 @@ WORKDIR /back-end
 EXPOSE 3001
 COPY . .
 RUN npm install
-# ADD node_modules.tar.gz ./docker/todo-app/back-end/Dockerfile
+ADD node_modules.tar.gz ./
 ENTRYPOINT ["npm", "start"]
