@@ -1,1 +1,1 @@
-docker container ls "name=01container"
+docker container ls -f "name=01container"
