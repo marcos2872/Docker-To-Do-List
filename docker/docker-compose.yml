@@ -1,0 +1,20 @@
+version: '3'
+services:
+  todobackend:
+    build: ./todo-app/front-end
+    ports:
+      - 3001:3001
+    
+  todofrontend:
+    build: ./todo-app/back-end
+    ports:
+      - 3000:3000
+    depends_on:
+      - todobackend
+    
+  todotests:
+    build: ./todo-app/tests
+    depends_on:
+      - todobackend
+      - todofrontend
+    
